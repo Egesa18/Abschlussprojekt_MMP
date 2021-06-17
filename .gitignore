@@ -35,4 +35,4 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-Abschlussprojekt_MMP/Logs/shadercompiler-UnityShaderCompiler.exe0.log
+*.exe0.log
