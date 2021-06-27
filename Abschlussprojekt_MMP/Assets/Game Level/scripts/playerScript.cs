@@ -25,7 +25,7 @@ public class playerScript : MonoBehaviour
         {
             mp = realPosition;
         }
-        print(mp);
+        //print(mp);
     }
 
 }
