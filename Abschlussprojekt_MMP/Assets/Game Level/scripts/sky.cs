@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class sky : MonoBehaviour {
 
-    GameObject player;
+    GameObject cameraview;
 
     
 
 	// Use this for initialization
 	void Start () {
-        player = GameObject.Find("player");
+        cameraview = GameObject.Find("CamMovement");
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        transform.position = new Vector3(player.transform.position.x, 8, 22);
-     
-
+        transform.position = new Vector3(cameraview.transform.position.x, 5, 0);
 
     }
 }
