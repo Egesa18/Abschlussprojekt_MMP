@@ -12,7 +12,7 @@ public class backgroundScript : MonoBehaviour
     private GameObject syringe2;
     private GameObject syringe3;
     private GameObject scoreObject1;
-    private int score1;
+    public int score1 = 0;
     private GameObject scoreObject2;
     private int score2;
     private GameObject scoreObject3;
