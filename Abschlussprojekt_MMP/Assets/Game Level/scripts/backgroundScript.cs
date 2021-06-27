@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class backgroundScript : MonoBehaviour
 {
@@ -38,6 +39,10 @@ public class backgroundScript : MonoBehaviour
         if (counter < 0.5f)
         {
             counter = timer / 60.0f;
+        } else if (counter >= 0.05f)
+        {
+            SceneManager.LoadScene("Main Menu");
+            Cursor.visible = true;
         }
         healthFront.transform.localScale = new Vector2(counter, 0.5f);
         scoreObject1.GetComponent<Text>().text = "Type A: " + score1.ToString();
