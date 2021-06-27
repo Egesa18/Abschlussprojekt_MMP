@@ -39,7 +39,7 @@ public class backgroundScript : MonoBehaviour
         if (counter < 0.5f)
         {
             counter = timer / 60.0f;
-        } else if (counter >= 0.5f)
+        } else if (counter >= 0.05f)
         {
             SceneManager.LoadScene("Main Menu");
             Cursor.visible = true;
