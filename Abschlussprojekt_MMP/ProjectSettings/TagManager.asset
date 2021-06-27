@@ -47,6 +47,12 @@ TagManager:
   - name: Urban Background
     uniqueID: 1729283213
     locked: 0
+  - name: Grass Background
+    uniqueID: 700718927
+    locked: 0
+  - name: Grass Foreground
+    uniqueID: 2171110393
+    locked: 0
   - name: Vordergrund
     uniqueID: 576341073
     locked: 0
