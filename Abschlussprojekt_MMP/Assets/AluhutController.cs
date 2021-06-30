@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AluhutManager : MonoBehaviour
+public class AluhutController : MonoBehaviour
 {
     [SerializeField] private List<GameObject> aluhutPrefabs;
     [SerializeField] private float spawnTime = 1.0f;
