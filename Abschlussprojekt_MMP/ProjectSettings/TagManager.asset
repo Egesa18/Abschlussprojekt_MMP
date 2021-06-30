@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Prefabs
   - 
   - 
   - 
@@ -58,4 +58,7 @@ TagManager:
     locked: 0
   - name: Vordergrund
     uniqueID: 576341073
+    locked: 0
+  - name: Prefabs
+    uniqueID: 2898977907
     locked: 0

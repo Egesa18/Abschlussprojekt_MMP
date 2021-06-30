@@ -6,8 +6,8 @@ public class npcScript : MonoBehaviour
 {
     //**
     [SerializeField] private float speed = 0.2f; 
-    private Vector2 screenBounds;
-    //**
+   // private Vector2 screenBounds;
+
     float width;
     float height;
     float xmin;
@@ -19,6 +19,7 @@ public class npcScript : MonoBehaviour
     public backgroundScript bgS;
 
     private GameObject greenHat2;
+    
     RectTransform hitBox;
     // Start is called before the first frame update
     void Start()
@@ -27,12 +28,14 @@ public class npcScript : MonoBehaviour
 
         greenHat2 = GameObject.Find("greenHat2");
         hitBox = (RectTransform)greenHat2.transform;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
- 
+
+        //todo: destroy the npcs after a while
 
         if (Input.GetMouseButtonDown(0))
         {

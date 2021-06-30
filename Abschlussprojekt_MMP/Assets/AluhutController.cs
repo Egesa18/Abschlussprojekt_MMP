@@ -5,7 +5,7 @@ using UnityEngine;
 public class AluhutController : MonoBehaviour
 {
     [SerializeField] private List<GameObject> aluhutPrefabs;
-    [SerializeField] private float spawnTime = 4.0f;
+    [SerializeField] private float spawnTime = 1.0f;
     float counter = 0.0f;
     private Vector2 screenBounds;
 
@@ -19,10 +19,10 @@ public class AluhutController : MonoBehaviour
     void Update()
     {
         counter += Time.deltaTime;
-        if (counter <= spawnTime)
+        if (counter <= spawnTime )
         {
-            counter = 0.0f;
-            Vector2 spawnPosition = new Vector2(Random.Range(-screenBounds.x, screenBounds.x*1.0f), - screenBounds.y * 0.5f);
+            counter = 0.0f + spawnTime * 0.9f;
+            Vector2 spawnPosition = new Vector2(Random.Range(-screenBounds.x, screenBounds.x*1.01f), Random.Range(-screenBounds.y * 0.5f, - screenBounds.x * 0.04f));
             
             GameObject aluhutPerson = Instantiate<GameObject>(aluhutPrefabs[Random.Range(0, aluhutPrefabs.Count)]);
             aluhutPerson.transform.position = spawnPosition;
