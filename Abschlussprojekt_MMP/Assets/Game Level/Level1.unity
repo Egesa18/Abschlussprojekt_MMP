@@ -234,6 +234,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 656b6a31829c3bc40bf3ab437732ddb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aluhutPrefabs:
+  - {fileID: 1105837956759040, guid: f31fb566307b463498f311cee18dac07, type: 3}
+  - {fileID: 1023704210731312, guid: 0b50b221a0513d8478712a57f0ae2432, type: 3}
+  - {fileID: 1337956163056606, guid: 513a08669601e7e4a8e38fcaf714c18a, type: 3}
+  - {fileID: 1336953551914666, guid: 2959c4ab942d0fc48be373a20d14f013, type: 3}
+  spawnTime: 1
 --- !u!4 &41654865
 Transform:
   m_ObjectHideFlags: 0
@@ -242,7 +248,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41654863}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -90, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
