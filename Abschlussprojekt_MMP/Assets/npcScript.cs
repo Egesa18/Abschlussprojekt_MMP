@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class npcScript : MonoBehaviour
 {
+    //**
+    [SerializeField] private float speed = 0.2f; 
+    private Vector2 screenBounds;
+    //**
     float width;
     float height;
     float xmin;
@@ -19,6 +23,8 @@ public class npcScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<Rigidbody2D>().velocity = new Vector2(speed, 0.0f);
+
         greenHat2 = GameObject.Find("greenHat2");
         hitBox = (RectTransform)greenHat2.transform;
     }
@@ -26,6 +32,7 @@ public class npcScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+ 
 
         if (Input.GetMouseButtonDown(0))
         {
