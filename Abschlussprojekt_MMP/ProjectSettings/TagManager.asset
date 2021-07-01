@@ -62,3 +62,6 @@ TagManager:
   - name: Prefabs
     uniqueID: 2898977907
     locked: 0
+  - name: CursorUI
+    uniqueID: 3135750719
+    locked: 0
