@@ -11,7 +11,7 @@ public class playerScript : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         rb2d.gravityScale = 0;
-        Cursor.visible = false;
+        //Cursor.visible = false;
     }
 
     // Update is called once per frame
