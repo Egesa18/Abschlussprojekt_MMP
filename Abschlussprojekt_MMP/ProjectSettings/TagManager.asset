@@ -47,21 +47,9 @@ TagManager:
   - name: General Background
     uniqueID: 2132489661
     locked: 0
-  - name: Urban Background
-    uniqueID: 1729283213
-    locked: 0
   - name: Grass Background
     uniqueID: 700718927
     locked: 0
-  - name: Grass Foreground
-    uniqueID: 2171110393
-    locked: 0
-  - name: Vordergrund
+  - name: Foreground
     uniqueID: 576341073
-    locked: 0
-  - name: Prefabs
-    uniqueID: 2898977907
-    locked: 0
-  - name: CursorUI
-    uniqueID: 3135750719
     locked: 0
