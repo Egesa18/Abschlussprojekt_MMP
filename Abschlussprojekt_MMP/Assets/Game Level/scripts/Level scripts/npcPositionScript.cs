@@ -21,6 +21,6 @@ public class npcPositionScript : MonoBehaviour
     {
         //sets the specific sorting order in that layer to a common sortingOrderOffset, depending on the where the object is located in the scene (lower y value generally means the object is closer to the camera and is thus rendered first)
         //the offset is needed to accomodate for the relative y position of the prefabs, which would be center otherwise
-        myRenderer.sortingOrder = (int)(sortingOrderOffset - (transform.position.y - prefabOffset)*10);
+        myRenderer.sortingOrder = (int)(sortingOrderOffset - (transform.position.y - prefabOffset)*100);
     }
 }
