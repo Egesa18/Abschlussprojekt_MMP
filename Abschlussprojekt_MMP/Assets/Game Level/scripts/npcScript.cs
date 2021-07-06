@@ -16,7 +16,7 @@ public class npcScript : MonoBehaviour
     float ymax;
     Vector3 pos;
     Vector3 mousePosition;
-    public backgroundScript bgS;
+    public guiBehaviour guiScript;
 
     private GameObject greenHat2;
     
@@ -52,7 +52,7 @@ public class npcScript : MonoBehaviour
             if (mousePosition.x < xmax && mousePosition.x > xmin && mousePosition.y < ymax && mousePosition.y > ymin)
             {
                 GameObject.Destroy(greenHat2);
-                bgS.score1 += 100;
+                guiScript.points_score += 100;
             }
 
  
