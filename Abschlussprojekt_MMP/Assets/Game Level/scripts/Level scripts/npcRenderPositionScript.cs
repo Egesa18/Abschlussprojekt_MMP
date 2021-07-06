@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class npcPositionScript : MonoBehaviour
+public class npcRenderPositionScript : MonoBehaviour
 {
     //Used to offset the order in layer based on objects y coordinate 
     [SerializeField]
