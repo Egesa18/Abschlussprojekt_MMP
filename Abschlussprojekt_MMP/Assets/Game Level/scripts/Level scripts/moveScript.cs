@@ -24,8 +24,10 @@ public class moveScript : MonoBehaviour
         if (movementKey == 1) 
 
         {
-
-            pos.x += speed * Time.deltaTime;
+            if(pos.x < 22)
+            {
+                pos.x += speed * Time.deltaTime;
+            }
 
         }
 
@@ -33,8 +35,10 @@ public class moveScript : MonoBehaviour
 
         {
 
-            pos.x -= speed * Time.deltaTime;
-
+            if(pos.x > 0)
+            {
+                pos.x -= speed * Time.deltaTime;
+            }
         }
 
 
