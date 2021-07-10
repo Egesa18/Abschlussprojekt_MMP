@@ -13,10 +13,10 @@ public class guiBehaviour : MonoBehaviour
     private GameObject vaccine3;
     private GameObject scoreObject1;
     private GameObject scoreObject2;
-    public int points_score = 0;
+    private int points_score;
     private int coins;
-    private float counter = 0.0f;
-    private float timer = 0.0f;
+    private float counter;
+    private float timer;
 
     // Start is called before the first frame update
     void Start()
@@ -28,10 +28,25 @@ public class guiBehaviour : MonoBehaviour
         vaccine3 = GameObject.Find("vaccine3");
         scoreObject1 = GameObject.Find("points_score");
         scoreObject2 = GameObject.Find("coins");
+        points_score = 0;
+        counter = 0.0f;
+        timer = 0.0f;
     }
 
     // Update is called once per frame
     void Update()
+    {
+        scoreObject1.GetComponent<Text>().text = "SCORE: " + points_score.ToString();
+        scoreObject2.GetComponent<Text>().text = "Coins: " + coins.ToString();
+    }
+
+    void FixedUpdate()
+    {
+        roundDurationTimer();
+    }
+
+    // Controls the Timer Bar indicating round end
+    void roundDurationTimer()
     {
         timer += Time.deltaTime;
         if (counter < 0.5f)
@@ -43,7 +58,10 @@ public class guiBehaviour : MonoBehaviour
             Cursor.visible = true;
         }
         timerFront.transform.localScale = new Vector2(counter, 0.5f);
-        scoreObject1.GetComponent<Text>().text = "SCORE: " + points_score.ToString();
-        scoreObject2.GetComponent<Text>().text = "Type B: " + coins.ToString();
+    }
+
+    public void manipulateScore(int pointsIncrement)
+    {
+        this.points_score += pointsIncrement;
     }
 }

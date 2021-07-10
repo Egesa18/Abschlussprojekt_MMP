@@ -585,6 +585,7 @@ GameObject:
   - component: {fileID: 4153648347871234}
   - component: {fileID: -6049809486701077953}
   - component: {fileID: 1324692886313665548}
+  - component: {fileID: 329231288869058746}
   m_Layer: 0
   m_Name: Chara_13
   m_TagString: Untagged
@@ -644,6 +645,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sortingOrderOffset: 10000
+--- !u!70 &329231288869058746
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656935683847618}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.005239159, y: -0.3964322}
+  m_Size: {x: 0.601291, y: 0.9685648}
+  m_Direction: 0
 --- !u!1 &1662674516281110
 GameObject:
   m_ObjectHideFlags: 0
