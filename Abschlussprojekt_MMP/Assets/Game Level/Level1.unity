@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 25836002}
   - component: {fileID: 25836003}
+  - component: {fileID: 25836004}
   m_Layer: 0
   m_Name: grass-texture (5)
   m_TagString: Untagged
@@ -148,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 25836001}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.74, y: -2.6, z: 0}
+  m_LocalPosition: {x: 26.74, y: -2.621, z: 0}
   m_LocalScale: {x: 0.97875804, y: 0.6979516, z: 0.70334524}
   m_Children: []
   m_Father: {fileID: 625495664}
@@ -205,6 +206,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &25836004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25836001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
+--- !u!1 &28054748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 28054750}
+  - component: {fileID: 28054749}
+  m_Layer: 0
+  m_Name: ShootCursor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &28054749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28054748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b668a07188552014187dda9464acebb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crosshair: {fileID: 2800000, guid: 640aeb5365852894c8454f85ba06f056, type: 3}
+--- !u!4 &28054750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28054748}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -726.2815, y: 12.334813, z: -6616.5723}
+  m_LocalScale: {x: 73.200005, y: 73.200005, z: 73.200005}
+  m_Children: []
+  m_Father: {fileID: 434884946}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &41654863
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +274,7 @@ GameObject:
   - component: {fileID: 41654865}
   - component: {fileID: 41654864}
   m_Layer: 6
-  m_Name: AluhutController
+  m_Name: npcSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -248,11 +306,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41654863}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -90, z: 0}
+  m_LocalPosition: {x: -17.971224, y: -92.83683, z: 5.4732647}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 1460273477}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &131768922
 GameObject:
@@ -266,6 +324,7 @@ GameObject:
   - component: {fileID: 131768924}
   - component: {fileID: 131768925}
   - component: {fileID: 131768926}
+  - component: {fileID: 131768927}
   m_Layer: 0
   m_Name: grassSummer3 (19)
   m_TagString: Untagged
@@ -324,8 +383,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -369,6 +428,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &131768927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131768922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &171803532
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,6 +451,7 @@ GameObject:
   m_Component:
   - component: {fileID: 171803533}
   - component: {fileID: 171803534}
+  - component: {fileID: 171803535}
   m_Layer: 0
   m_Name: house09 (1)
   m_TagString: Untagged
@@ -394,7 +467,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171803532}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.66, y: 1.43, z: 0}
+  m_LocalPosition: {x: 29.769, y: 1.485, z: 0}
   m_LocalScale: {x: 0.4434, y: 0.3837, z: 1}
   m_Children: []
   m_Father: {fileID: 947349543}
@@ -437,8 +510,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1729283213
-  m_SortingLayer: 3
+  m_SortingLayerID: 2132489661
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4564a688462ce0841a9388dae484554e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -451,6 +524,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &171803535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171803532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &172143422
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 172143423}
   - component: {fileID: 172143424}
+  - component: {fileID: 172143425}
   m_Layer: 0
   m_Name: grass-texture (6)
   m_TagString: Untagged
@@ -533,6 +620,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &172143425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172143422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &190645817
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,6 +645,7 @@ GameObject:
   - component: {fileID: 190645819}
   - component: {fileID: 190645820}
   - component: {fileID: 190645821}
+  - component: {fileID: 190645822}
   m_Layer: 0
   m_Name: grassSummer3 (1)
   m_TagString: Untagged
@@ -603,8 +704,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -648,6 +749,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &190645822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190645817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &200272425
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,6 +774,7 @@ GameObject:
   - component: {fileID: 200272427}
   - component: {fileID: 200272428}
   - component: {fileID: 200272429}
+  - component: {fileID: 200272430}
   m_Layer: 0
   m_Name: grassSummer3 (20)
   m_TagString: Untagged
@@ -718,8 +833,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -763,6 +878,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &200272430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200272425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &205833596
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,7 +903,7 @@ GameObject:
   - component: {fileID: 205833599}
   - component: {fileID: 205833598}
   m_Layer: 5
-  m_Name: score2
+  m_Name: coins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -797,8 +925,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -85, y: 35}
-  m_SizeDelta: {x: 45, y: 45}
+  m_AnchoredPosition: {x: -82.00006, y: 501.2}
+  m_SizeDelta: {x: 64.805, y: 25.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &205833598
 MonoBehaviour:
@@ -833,9 +961,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '
-
-'
+  m_Text: 0
 --- !u!222 &205833599
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -854,6 +980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 277832260}
   - component: {fileID: 277832261}
+  - component: {fileID: 277832262}
   m_Layer: 0
   m_Name: grass-texture
   m_TagString: Untagged
@@ -869,7 +996,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 277832259}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.4177, y: -2.5311, z: 0}
+  m_LocalPosition: {x: -7.428, y: -2.601, z: 0}
   m_LocalScale: {x: 0.97875804, y: 0.6979516, z: 0.70334524}
   m_Children: []
   m_Father: {fileID: 625495664}
@@ -926,6 +1053,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &277832262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277832259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &367939332
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,6 +1078,7 @@ GameObject:
   - component: {fileID: 367939334}
   - component: {fileID: 367939335}
   - component: {fileID: 367939336}
+  - component: {fileID: 367939337}
   m_Layer: 0
   m_Name: grassSummer3 (17)
   m_TagString: Untagged
@@ -996,8 +1137,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1041,6 +1182,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &367939337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367939332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &434884942
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,7 +1209,7 @@ GameObject:
   - component: {fileID: 434884943}
   - component: {fileID: 434884947}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: HUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1119,8 +1273,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: -1159216577
-  m_SortingOrder: 0
+  m_SortingLayerID: 576341073
+  m_SortingOrder: 12000
   m_TargetDisplay: 0
 --- !u!224 &434884946
 RectTransform:
@@ -1140,9 +1294,10 @@ RectTransform:
   - {fileID: 1717277610}
   - {fileID: 1396845723}
   - {fileID: 205833597}
-  - {fileID: 1782105910}
+  - {fileID: 532061420}
+  - {fileID: 28054750}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1161,7 +1316,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b0da1f0b6e457a4ea6896059bd43379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score1: 0
 --- !u!1 &447339961
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,6 +1328,7 @@ GameObject:
   - component: {fileID: 447339963}
   - component: {fileID: 447339964}
   - component: {fileID: 447339965}
+  - component: {fileID: 447339966}
   m_Layer: 0
   m_Name: grassSummer3 (22)
   m_TagString: Untagged
@@ -1232,8 +1387,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1277,6 +1432,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &447339966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447339961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &488437468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,6 +1457,7 @@ GameObject:
   - component: {fileID: 488437470}
   - component: {fileID: 488437471}
   - component: {fileID: 488437472}
+  - component: {fileID: 488437473}
   m_Layer: 0
   m_Name: grassSummer3 (7)
   m_TagString: Untagged
@@ -1347,8 +1516,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1392,6 +1561,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &488437473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488437468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
+--- !u!1 &489434207
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 489434208}
+  m_Layer: 0
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &489434208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489434207}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.971224, y: 2.8368278, z: -5.4732647}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 947349543}
+  - {fileID: 625495664}
+  - {fileID: 1215713059}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &524643893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,6 +1617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 524643894}
   - component: {fileID: 524643895}
+  - component: {fileID: 524643896}
   m_Layer: 0
   m_Name: grass-texture (2)
   m_TagString: Untagged
@@ -1417,7 +1633,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 524643893}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.27, y: -2.58, z: 0}
+  m_LocalPosition: {x: 6.27, y: -2.601, z: 0}
   m_LocalScale: {x: 0.97875804, y: 0.6979516, z: 0.70334524}
   m_Children: []
   m_Father: {fileID: 625495664}
@@ -1474,6 +1690,101 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &524643896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524643893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
+--- !u!1 &532061419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 532061420}
+  - component: {fileID: 532061421}
+  m_Layer: 0
+  m_Name: ItemFrame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &532061420
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532061419}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -469, y: -246, z: 0}
+  m_LocalScale: {x: 35.12016, y: 35.12016, z: 35.12016}
+  m_Children: []
+  m_Father: {fileID: 434884946}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &532061421
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532061419}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
+  m_SortingOrder: 32767
+  m_Sprite: {fileID: 21300000, guid: 20db7ae71922011488f858908fd500cd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.28, y: 1.28}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &539113906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,6 +1795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 539113908}
   - component: {fileID: 539113907}
+  - component: {fileID: 539113909}
   m_Layer: 0
   m_Name: house09
   m_TagString: Untagged
@@ -1528,8 +1840,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1729283213
-  m_SortingLayer: 3
+  m_SortingLayerID: 2132489661
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4564a688462ce0841a9388dae484554e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1550,12 +1862,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539113906}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.87, y: 1.5, z: 0}
+  m_LocalPosition: {x: 2.9789991, y: 1.5550001, z: 0}
   m_LocalScale: {x: 0.4434, y: 0.3837, z: 1}
   m_Children: []
   m_Father: {fileID: 947349543}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &539113909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539113906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &572270520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,6 +1891,7 @@ GameObject:
   m_Component:
   - component: {fileID: 572270522}
   - component: {fileID: 572270521}
+  - component: {fileID: 572270523}
   m_Layer: 0
   m_Name: house06
   m_TagString: Untagged
@@ -1610,8 +1936,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1729283213
-  m_SortingLayer: 3
+  m_SortingLayerID: 2132489661
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 766c748484876454dabd23f413560ace, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1632,12 +1958,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572270520}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.08, y: 1.82, z: 0}
+  m_LocalPosition: {x: -1.9710007, y: 1.8750001, z: 0}
   m_LocalScale: {x: 0.45, y: 0.4173, z: 1}
   m_Children: []
   m_Father: {fileID: 947349543}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &572270523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572270520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &613609885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,6 +1987,7 @@ GameObject:
   m_Component:
   - component: {fileID: 613609886}
   - component: {fileID: 613609887}
+  - component: {fileID: 613609888}
   m_Layer: 0
   m_Name: grass-texture (3)
   m_TagString: Untagged
@@ -1720,6 +2060,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &613609888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613609885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &615097630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1730,7 +2083,6 @@ GameObject:
   m_Component:
   - component: {fileID: 615097632}
   - component: {fileID: 615097631}
-  - component: {fileID: 615097633}
   m_Layer: 0
   m_Name: sky
   m_TagString: Untagged
@@ -1797,24 +2149,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615097630}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.04, y: 5.96, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.0097, y: 5.9601, z: 10}
+  m_LocalScale: {x: 1.0448517, y: 1.0417265, z: 1.0417265}
   m_Children: []
-  m_Father: {fileID: 1278627614}
+  m_Father: {fileID: 623861714}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &615097633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 615097630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85e02fab2ac366648a4a1747c62abb9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &623861711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1827,6 +2167,8 @@ GameObject:
   - component: {fileID: 623861713}
   - component: {fileID: 623861712}
   - component: {fileID: 623861715}
+  - component: {fileID: 623861716}
+  - component: {fileID: 623861717}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1893,9 +2235,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623861711}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 10, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 615097632}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1906,12 +2249,41 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623861711}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a28580da2f7936f4e9e0bcd9d9105a70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followObject: {fileID: 1653955095}
+  followObject: {fileID: 0}
+--- !u!114 &623861716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623861711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f365dc9e11a8a0c429bd74041cbfa85b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+--- !u!114 &623861717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623861711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56666c5a40171f54783dd416a44f42bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_MaxRayIntersections: 0
 --- !u!1 &625495663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1935,8 +2307,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625495663}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -17.971224, y: -2.8368278, z: 5.4732647}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 277832260}
@@ -1946,8 +2318,8 @@ Transform:
   - {fileID: 1959732058}
   - {fileID: 25836002}
   - {fileID: 172143423}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 489434208}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &674302517
 GameObject:
@@ -1961,6 +2333,7 @@ GameObject:
   - component: {fileID: 674302519}
   - component: {fileID: 674302520}
   - component: {fileID: 674302521}
+  - component: {fileID: 674302522}
   m_Layer: 0
   m_Name: grassSummer3 (13)
   m_TagString: Untagged
@@ -2019,8 +2392,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2064,6 +2437,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &674302522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674302517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
+--- !u!1 &775324496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 775324497}
+  - component: {fileID: 775324498}
+  m_Layer: 0
+  m_Name: npcBehaviour&Hit detection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &775324497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775324496}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.026249, y: -1.8286643, z: -1.5767894}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1460273477}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &775324498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775324496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306f831a93d3c7e468ce4f7afd6a9d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guiScript: {fileID: 434884947}
 --- !u!1 &778363016
 GameObject:
   m_ObjectHideFlags: 0
@@ -2081,7 +2511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &778363017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2128,7 +2558,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &792611124
 GameObject:
@@ -2142,6 +2572,7 @@ GameObject:
   - component: {fileID: 792611126}
   - component: {fileID: 792611127}
   - component: {fileID: 792611128}
+  - component: {fileID: 792611129}
   m_Layer: 0
   m_Name: grassSummer3 (3)
   m_TagString: Untagged
@@ -2200,8 +2631,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2245,6 +2676,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &792611129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792611124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &826377457
 GameObject:
   m_ObjectHideFlags: 0
@@ -2257,6 +2701,7 @@ GameObject:
   - component: {fileID: 826377459}
   - component: {fileID: 826377460}
   - component: {fileID: 826377461}
+  - component: {fileID: 826377462}
   m_Layer: 0
   m_Name: grassSummer3 (16)
   m_TagString: Untagged
@@ -2315,8 +2760,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2360,6 +2805,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &826377462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826377457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &919213626
 GameObject:
   m_ObjectHideFlags: 0
@@ -2372,6 +2830,7 @@ GameObject:
   - component: {fileID: 919213628}
   - component: {fileID: 919213629}
   - component: {fileID: 919213630}
+  - component: {fileID: 919213631}
   m_Layer: 0
   m_Name: grassSummer3 (15)
   m_TagString: Untagged
@@ -2430,8 +2889,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2475,6 +2934,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &919213631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919213626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &947349542
 GameObject:
   m_ObjectHideFlags: 0
@@ -2498,8 +2970,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947349542}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -17.971224, y: -2.8368278, z: 5.4732647}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1729594540}
@@ -2509,241 +2981,9 @@ Transform:
   - {fileID: 2004019050}
   - {fileID: 1595258614}
   - {fileID: 171803533}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 489434208}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &962781410
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 962781414}
-  - component: {fileID: 962781413}
-  - component: {fileID: 962781412}
-  - component: {fileID: 962781411}
-  m_Layer: 0
-  m_Name: player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &962781411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 962781410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c072edc2cb03e34eb886b92fe5eb997, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!50 &962781412
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 962781410}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!212 &962781413
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 962781410}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1159216577
-  m_SortingLayer: 8
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2e57fc63b53a27640abc063767d330a5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 5, y: 5}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &962781414
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 962781410}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5258093, y: -0.19063973, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &982986659
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 982986663}
-  - component: {fileID: 982986662}
-  - component: {fileID: 982986661}
-  - component: {fileID: 982986660}
-  - component: {fileID: 982986664}
-  m_Layer: 5
-  m_Name: Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &982986660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982986659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &982986661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982986659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &982986662
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982986659}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 1
-  m_Camera: {fileID: 623861713}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 576341073
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!224 &982986663
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982986659}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 1443395541}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
---- !u!114 &982986664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982986659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306f831a93d3c7e468ce4f7afd6a9d40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  bgS: {fileID: 434884947}
 --- !u!1 &1022489020
 GameObject:
   m_ObjectHideFlags: 0
@@ -2756,6 +2996,7 @@ GameObject:
   - component: {fileID: 1022489022}
   - component: {fileID: 1022489023}
   - component: {fileID: 1022489024}
+  - component: {fileID: 1022489025}
   m_Layer: 0
   m_Name: grassSummer3 (6)
   m_TagString: Untagged
@@ -2814,8 +3055,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2859,6 +3100,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1022489025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022489020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &1077044137
 GameObject:
   m_ObjectHideFlags: 0
@@ -2871,6 +3125,7 @@ GameObject:
   - component: {fileID: 1077044139}
   - component: {fileID: 1077044140}
   - component: {fileID: 1077044141}
+  - component: {fileID: 1077044142}
   m_Layer: 0
   m_Name: grassSummer3 (14)
   m_TagString: Untagged
@@ -2929,8 +3184,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2974,6 +3229,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1077044142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077044137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &1167154454
 GameObject:
   m_ObjectHideFlags: 0
@@ -2986,6 +3254,7 @@ GameObject:
   - component: {fileID: 1167154456}
   - component: {fileID: 1167154457}
   - component: {fileID: 1167154458}
+  - component: {fileID: 1167154459}
   m_Layer: 0
   m_Name: grassSummer3 (11)
   m_TagString: Untagged
@@ -3044,8 +3313,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3089,6 +3358,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1167154459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167154454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &1215713058
 GameObject:
   m_ObjectHideFlags: 0
@@ -3112,8 +3394,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215713058}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7613094, y: 1.5710816, z: 31.297855}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -18.732533, y: -1.2657461, z: 36.77112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1482281220}
@@ -3139,8 +3421,8 @@ Transform:
   - {fileID: 200272426}
   - {fileID: 1434996901}
   - {fileID: 447339962}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 489434208}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1223713506
 GameObject:
@@ -3154,7 +3436,7 @@ GameObject:
   - component: {fileID: 1223713509}
   - component: {fileID: 1223713508}
   m_Layer: 5
-  m_Name: healthBarBack
+  m_Name: timerBarBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3176,7 +3458,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 35}
+  m_AnchoredPosition: {x: -378, y: 506}
   m_SizeDelta: {x: 400, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1223713508
@@ -3217,37 +3499,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223713506}
   m_CullTransparentMesh: 1
---- !u!1 &1278627613
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1278627614}
-  m_Layer: 0
-  m_Name: Sky
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1278627614
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1278627613}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 615097632}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1311119421
 GameObject:
   m_ObjectHideFlags: 0
@@ -3260,6 +3511,7 @@ GameObject:
   - component: {fileID: 1311119423}
   - component: {fileID: 1311119424}
   - component: {fileID: 1311119425}
+  - component: {fileID: 1311119426}
   m_Layer: 0
   m_Name: grassSummer3 (12)
   m_TagString: Untagged
@@ -3318,8 +3570,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3363,6 +3615,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1311119426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311119421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &1349193485
 GameObject:
   m_ObjectHideFlags: 0
@@ -3375,6 +3640,7 @@ GameObject:
   - component: {fileID: 1349193487}
   - component: {fileID: 1349193488}
   - component: {fileID: 1349193489}
+  - component: {fileID: 1349193490}
   m_Layer: 0
   m_Name: grassSummer3 (4)
   m_TagString: Untagged
@@ -3433,8 +3699,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3478,6 +3744,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1349193490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349193485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &1357923442
 GameObject:
   m_ObjectHideFlags: 0
@@ -3490,6 +3769,7 @@ GameObject:
   - component: {fileID: 1357923444}
   - component: {fileID: 1357923445}
   - component: {fileID: 1357923446}
+  - component: {fileID: 1357923447}
   m_Layer: 0
   m_Name: grassSummer3 (9)
   m_TagString: Untagged
@@ -3548,8 +3828,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3593,6 +3873,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1357923447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357923442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &1372501520
 GameObject:
   m_ObjectHideFlags: 0
@@ -3605,6 +3898,7 @@ GameObject:
   - component: {fileID: 1372501522}
   - component: {fileID: 1372501523}
   - component: {fileID: 1372501524}
+  - component: {fileID: 1372501525}
   m_Layer: 0
   m_Name: grassSummer3 (18)
   m_TagString: Untagged
@@ -3663,8 +3957,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3708,6 +4002,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1372501525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372501520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &1396845722
 GameObject:
   m_ObjectHideFlags: 0
@@ -3720,7 +4027,7 @@ GameObject:
   - component: {fileID: 1396845725}
   - component: {fileID: 1396845724}
   m_Layer: 5
-  m_Name: score1
+  m_Name: points_score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3742,8 +4049,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -135, y: 35}
-  m_SizeDelta: {x: 45, y: 45}
+  m_AnchoredPosition: {x: -82, y: 529}
+  m_SizeDelta: {x: 64.8, y: 29.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1396845724
 MonoBehaviour:
@@ -3758,7 +4065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.8679245, g: 0.020469915, b: 0.1765919, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3778,9 +4085,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '
-
-'
+  m_Text: SCORE
 --- !u!222 &1396845725
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3801,6 +4106,7 @@ GameObject:
   - component: {fileID: 1434996902}
   - component: {fileID: 1434996903}
   - component: {fileID: 1434996904}
+  - component: {fileID: 1434996905}
   m_Layer: 0
   m_Name: grassSummer3 (21)
   m_TagString: Untagged
@@ -3859,8 +4165,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3904,7 +4210,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1443395540
+--- !u!114 &1434996905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434996900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
+--- !u!1 &1460273476
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3912,93 +4231,30 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1443395541}
-  - component: {fileID: 1443395543}
-  - component: {fileID: 1443395542}
-  - component: {fileID: 1443395544}
-  m_Layer: 5
-  m_Name: greenHat2
+  - component: {fileID: 1460273477}
+  m_Layer: 0
+  m_Name: Behaviour/Logic Controllers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1443395541
-RectTransform:
+--- !u!4 &1460273477
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443395540}
+  m_GameObject: {fileID: 1460273476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5615442, y: 0.5615442, z: 0.5615442}
-  m_Children: []
-  m_Father: {fileID: 982986663}
-  m_RootOrder: 0
+  m_LocalPosition: {x: 17.971224, y: 2.8368278, z: -5.4732647}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 775324497}
+  - {fileID: 41654865}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21, y: -66}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1443395542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443395540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300004, guid: b08e570699f1c8a4f9cc388204aef3bc, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1443395543
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443395540}
-  m_CullTransparentMesh: 1
---- !u!95 &1443395544
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443395540}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6ccc15a6a40682646891a2d4e586d1f1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1482281219
 GameObject:
   m_ObjectHideFlags: 0
@@ -4011,6 +4267,7 @@ GameObject:
   - component: {fileID: 1482281221}
   - component: {fileID: 1482281222}
   - component: {fileID: 1482281223}
+  - component: {fileID: 1482281224}
   m_Layer: 0
   m_Name: grassSummer3
   m_TagString: Untagged
@@ -4069,8 +4326,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4114,6 +4371,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1482281224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482281219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &1595258613
 GameObject:
   m_ObjectHideFlags: 0
@@ -4124,6 +4394,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1595258614}
   - component: {fileID: 1595258615}
+  - component: {fileID: 1595258616}
   m_Layer: 0
   m_Name: house06 (1)
   m_TagString: Untagged
@@ -4139,7 +4410,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595258613}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.71, y: 1.75, z: 0}
+  m_LocalPosition: {x: 24.818998, y: 1.8050001, z: 0}
   m_LocalScale: {x: 0.45, y: 0.4173, z: 1}
   m_Children: []
   m_Father: {fileID: 947349543}
@@ -4182,8 +4453,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1729283213
-  m_SortingLayer: 3
+  m_SortingLayerID: 2132489661
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 766c748484876454dabd23f413560ace, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4196,102 +4467,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1653955092
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1653955095}
-  - component: {fileID: 1653955094}
-  - component: {fileID: 1653955093}
-  m_Layer: 0
-  m_Name: CamMovement
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1653955093
+--- !u!114 &1595258616
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653955092}
+  m_GameObject: {fileID: 1595258613}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f365dc9e11a8a0c429bd74041cbfa85b, type: 3}
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
---- !u!212 &1653955094
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653955092}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1653955095
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653955092}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  sortingOrderOffset: 10000
 --- !u!1 &1685707421
 GameObject:
   m_ObjectHideFlags: 0
@@ -4302,6 +4490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1685707422}
   - component: {fileID: 1685707423}
+  - component: {fileID: 1685707424}
   m_Layer: 0
   m_Name: grass-texture (1)
   m_TagString: Untagged
@@ -4317,7 +4506,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685707421}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.58, y: -2.56, z: 0}
+  m_LocalPosition: {x: -0.5809, y: -2.6, z: 0}
   m_LocalScale: {x: 0.97875804, y: 0.6979516, z: 0.70334524}
   m_Children: []
   m_Father: {fileID: 625495664}
@@ -4374,6 +4563,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1685707424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685707421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &1717277609
 GameObject:
   m_ObjectHideFlags: 0
@@ -4386,7 +4588,7 @@ GameObject:
   - component: {fileID: 1717277612}
   - component: {fileID: 1717277611}
   m_Layer: 5
-  m_Name: healthBarFront
+  m_Name: timerBarFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4408,7 +4610,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 35}
+  m_AnchoredPosition: {x: -378.00003, y: 506}
   m_SizeDelta: {x: 400, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1717277611
@@ -4461,6 +4663,7 @@ GameObject:
   - component: {fileID: 1718219392}
   - component: {fileID: 1718219393}
   - component: {fileID: 1718219394}
+  - component: {fileID: 1718219395}
   m_Layer: 0
   m_Name: grassSummer3 (8)
   m_TagString: Untagged
@@ -4519,8 +4722,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4564,6 +4767,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1718219395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718219390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &1725444288
 GameObject:
   m_ObjectHideFlags: 0
@@ -4576,6 +4792,7 @@ GameObject:
   - component: {fileID: 1725444290}
   - component: {fileID: 1725444291}
   - component: {fileID: 1725444292}
+  - component: {fileID: 1725444293}
   m_Layer: 0
   m_Name: grassSummer3 (5)
   m_TagString: Untagged
@@ -4634,8 +4851,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4679,6 +4896,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1725444293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725444288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &1729594538
 GameObject:
   m_ObjectHideFlags: 0
@@ -4689,6 +4919,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1729594540}
   - component: {fileID: 1729594539}
+  - component: {fileID: 1729594541}
   m_Layer: 0
   m_Name: house02
   m_TagString: Untagged
@@ -4733,8 +4964,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1729283213
-  m_SortingLayer: 3
+  m_SortingLayerID: 2132489661
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6f3daef510a5b234b9f2b6c1a026ada7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4755,12 +4986,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729594538}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.55, y: 1.8, z: 0}
+  m_LocalPosition: {x: -7.438, y: 1.833, z: 0}
   m_LocalScale: {x: 0.4518, y: 0.4518, z: 0.4518}
   m_Children: []
   m_Father: {fileID: 947349543}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1729594541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729594538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &1731668438
 GameObject:
   m_ObjectHideFlags: 0
@@ -4773,6 +5017,7 @@ GameObject:
   - component: {fileID: 1731668440}
   - component: {fileID: 1731668441}
   - component: {fileID: 1731668442}
+  - component: {fileID: 1731668443}
   m_Layer: 0
   m_Name: grassSummer3 (2)
   m_TagString: Untagged
@@ -4831,8 +5076,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4876,87 +5121,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1782105909
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1782105910}
-  - component: {fileID: 1782105912}
-  - component: {fileID: 1782105911}
-  m_Layer: 5
-  m_Name: score3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1782105910
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782105909}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 434884946}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -35, y: 35}
-  m_SizeDelta: {x: 45, y: 45}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1782105911
+--- !u!114 &1731668443
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782105909}
+  m_GameObject: {fileID: 1731668438}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 11
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: '
-
-'
---- !u!222 &1782105912
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782105909}
-  m_CullTransparentMesh: 1
+  sortingOrderOffset: 10000
 --- !u!1 &1842757245
 GameObject:
   m_ObjectHideFlags: 0
@@ -4969,7 +5146,7 @@ GameObject:
   - component: {fileID: 1842757248}
   - component: {fileID: 1842757247}
   m_Layer: 5
-  m_Name: syringe1
+  m_Name: vaccine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5014,7 +5191,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2e57fc63b53a27640abc063767d330a5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7517cc5c322b3c84ca8a038415522efa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5044,7 +5221,7 @@ GameObject:
   - component: {fileID: 1949650787}
   - component: {fileID: 1949650786}
   m_Layer: 5
-  m_Name: syringe2
+  m_Name: vaccine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5089,7 +5266,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2e57fc63b53a27640abc063767d330a5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7517cc5c322b3c84ca8a038415522efa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5117,6 +5294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1959732058}
   - component: {fileID: 1959732059}
+  - component: {fileID: 1959732060}
   m_Layer: 0
   m_Name: grass-texture (4)
   m_TagString: Untagged
@@ -5132,7 +5310,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959732057}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.9023, y: -2.5711, z: 0}
+  m_LocalPosition: {x: 19.898, y: -2.621, z: 0}
   m_LocalScale: {x: 0.97875804, y: 0.6979516, z: 0.70334524}
   m_Children: []
   m_Father: {fileID: 625495664}
@@ -5189,6 +5367,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1959732060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959732057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &1986481885
 GameObject:
   m_ObjectHideFlags: 0
@@ -5201,6 +5392,7 @@ GameObject:
   - component: {fileID: 1986481887}
   - component: {fileID: 1986481888}
   - component: {fileID: 1986481889}
+  - component: {fileID: 1986481890}
   m_Layer: 0
   m_Name: grassSummer3 (10)
   m_TagString: Untagged
@@ -5259,8 +5451,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2123856903
-  m_SortingLayer: 5
+  m_SortingLayerID: 576341073
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57b5237da29c5ac4995509a38d6bb26a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5304,6 +5496,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33bc12675ec6cb40a4f11c06dbc929a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1986481890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986481885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &2004019049
 GameObject:
   m_ObjectHideFlags: 0
@@ -5314,6 +5519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2004019050}
   - component: {fileID: 2004019051}
+  - component: {fileID: 2004019052}
   m_Layer: 0
   m_Name: house02 (1)
   m_TagString: Untagged
@@ -5329,7 +5535,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2004019049}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.239998, y: 1.7299999, z: 0}
+  m_LocalPosition: {x: 19.348997, y: 1.785, z: 0}
   m_LocalScale: {x: 0.4518, y: 0.4518, z: 0.4518}
   m_Children: []
   m_Father: {fileID: 947349543}
@@ -5372,8 +5578,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1729283213
-  m_SortingLayer: 3
+  m_SortingLayerID: 2132489661
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6f3daef510a5b234b9f2b6c1a026ada7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5386,6 +5592,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2004019052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004019049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
 --- !u!1 &2018290949
 GameObject:
   m_ObjectHideFlags: 0
@@ -5398,7 +5617,7 @@ GameObject:
   - component: {fileID: 2018290952}
   - component: {fileID: 2018290951}
   m_Layer: 5
-  m_Name: syringe3
+  m_Name: vaccine3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5443,7 +5662,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2e57fc63b53a27640abc063767d330a5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7517cc5c322b3c84ca8a038415522efa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5471,6 +5690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2129733634}
   - component: {fileID: 2129733633}
+  - component: {fileID: 2129733635}
   m_Layer: 0
   m_Name: house01
   m_TagString: Untagged
@@ -5515,8 +5735,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1729283213
-  m_SortingLayer: 3
+  m_SortingLayerID: 2132489661
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 742c3106384b6c040b36de3f09cf5c2a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5537,9 +5757,22 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2129733632}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.94, y: 1.65, z: 0}
+  m_LocalPosition: {x: 11.048999, y: 1.705, z: 0}
   m_LocalScale: {x: 0.591, y: 0.591, z: 0.591}
   m_Children: []
   m_Father: {fileID: 947349543}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2129733635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129733632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b87df86670bf45bdaad8dedfcc2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderOffset: 10000
