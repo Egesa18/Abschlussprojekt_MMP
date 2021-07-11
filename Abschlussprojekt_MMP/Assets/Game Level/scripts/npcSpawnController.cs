@@ -22,10 +22,6 @@ public class npcSpawnController : MonoBehaviour
     // Increases the counter every time a new frame is displayed.
     // Every time the spawn time is reached,  it takes a new  random object from the prefabs list and instantiates it as a game object at a random position between the screen bounds.
    
- 
-
-
-
     void Update()
     {
         counter += Time.deltaTime;

@@ -11,7 +11,9 @@ public class npcScript : MonoBehaviour
     private float width, height, xmin, xmax, ymin, ymax;
     Vector3 pos, mousePosition;
     public guiBehaviour guiScript;
-    private GameObject greenHat2;
+    
+    //private GameObject greenHat2;
+   
 
 
     //RectTransform hitBox;
@@ -19,7 +21,9 @@ public class npcScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       //GetComponent<Rigidbody2D>().velocity = new Vector2(speed, 0.0f);
+     
+        
+        //GetComponent<Rigidbody2D>().velocity = new Vector2(speed, 0.0f);
     }
 
     // Update is called once per frame
@@ -27,8 +31,11 @@ public class npcScript : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+          
+
             //Debug.Log("Click, shooting ray");
             ShootRay();
+
         }
     }
 
