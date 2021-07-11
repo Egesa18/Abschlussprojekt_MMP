@@ -8,12 +8,14 @@ public class npcSpawnController : MonoBehaviour
     [SerializeField] private float spawnTime = 1.0f;  // how often do we spawn ( editable in inspector)
     float counter = 0.0f;
     private Vector2 screenBounds;
+    AudioSource spawningSound;
 
     // Start is called before the first frame update
     //Calculates the screen bounds into word coordinates
 
     void Start()
     {
+        spawningSound = GetComponent<AudioSource>();
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0.0f));
     }
 
@@ -28,10 +30,14 @@ public class npcSpawnController : MonoBehaviour
         if (counter >= spawnTime )
         {
             counter = 0.0f;
-            Vector2 spawnPosition = new Vector2(Random.Range(-screenBounds.x, screenBounds.x*1.01f), Random.Range(-screenBounds.y * 0.5f, - screenBounds.y * 0.04f));
             
+            Vector2 spawnPosition = new Vector2(Random.Range(0.0f, screenBounds.x), Random.Range(-screenBounds.y * 0.5f, -screenBounds.y * 0.04f));
             GameObject aluhutPerson = Instantiate<GameObject>(aluhutPrefabs[Random.Range(0, aluhutPrefabs.Count)]);
             aluhutPerson.transform.position = spawnPosition;
+            spawningSound.Play();
+            Debug.Log(aluhutPerson.transform.position.x);
+         
+           
             //aluhutPerson.hat.GetComponent<SpriteRenderer>().sortingLayerID = SortingLayer.NameToID("Prefabs");
         }
 
