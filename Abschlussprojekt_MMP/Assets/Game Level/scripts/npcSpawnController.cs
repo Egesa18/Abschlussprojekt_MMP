@@ -31,11 +31,15 @@ public class npcSpawnController : MonoBehaviour
         {
             counter = 0.0f;
             
-            Vector2 spawnPosition = new Vector2(Random.Range(0.0f, screenBounds.x), Random.Range(-screenBounds.y * 0.5f, -screenBounds.y * 0.04f));
+            Vector2 spawnPosition = new Vector2(Random.Range(-screenBounds.x, screenBounds.x), Random.Range(-screenBounds.y * 0.5f, -screenBounds.y * 0.04f));
             GameObject aluhutPerson = Instantiate<GameObject>(aluhutPrefabs[Random.Range(0, aluhutPrefabs.Count)]);
             aluhutPerson.transform.position = spawnPosition;
-            spawningSound.Play();
-            Debug.Log(aluhutPerson.transform.position.x);
+
+            if (aluhutPerson.transform.position.x > 0.0f && aluhutPerson.transform.position.x < screenBounds.x)
+            {
+                spawningSound.Play();
+               // Debug.Log(aluhutPerson.transform.position.x);
+            }
          
            
             //aluhutPerson.hat.GetComponent<SpriteRenderer>().sortingLayerID = SortingLayer.NameToID("Prefabs");
