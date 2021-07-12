@@ -11,9 +11,10 @@ public class npcScript : MonoBehaviour
     private float width, height, xmin, xmax, ymin, ymax;
     Vector3 pos, mousePosition;
     public guiBehaviour guiScript;
-    
+    AudioSource bonusSound;
+
     //private GameObject greenHat2;
-   
+
 
 
     //RectTransform hitBox;
@@ -21,8 +22,9 @@ public class npcScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-     
-        
+        bonusSound = GetComponent<AudioSource>();
+
+
         //GetComponent<Rigidbody2D>().velocity = new Vector2(speed, 0.0f);
     }
 
@@ -48,6 +50,11 @@ public class npcScript : MonoBehaviour
             //Debug.Log(hit.collider.gameObject.name);
             Destroy(hit.collider.gameObject);
             guiScript.manipulateScore(100);
+            if (guiScript.points_score == 1000)
+            {
+                bonusSound.Play();
+                Debug.Log("You reached Bonus.");
+            }
         }
     }
 /*

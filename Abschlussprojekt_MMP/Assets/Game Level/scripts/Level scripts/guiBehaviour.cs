@@ -13,14 +13,17 @@ public class guiBehaviour : MonoBehaviour
     private GameObject vaccine3;
     private GameObject scoreObject1;
     private GameObject scoreObject2;
-    private int points_score;
+    public int points_score;
     private int coins;
     private float counter;
     private float timer;
+   
+
 
     // Start is called before the first frame update
     void Start()
     {
+        
         timerBack = GameObject.Find("timerBarBack"); 
         timerFront = GameObject.Find("timerBarFront");
         vaccine1 = GameObject.Find("vaccine1");
@@ -63,5 +66,6 @@ public class guiBehaviour : MonoBehaviour
     public void manipulateScore(int pointsIncrement)
     {
         this.points_score += pointsIncrement;
+        
     }
 }
