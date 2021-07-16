@@ -12,7 +12,7 @@ public class grassSwag : MonoBehaviour {
     void Start() { 
         
         anim = GetComponent<Animator>();
-        anim.speed = Random.Range(0.7f, 1.2f);
+        anim.speed = Random.Range(0.5f, 2f);
        
 
 
@@ -27,8 +27,8 @@ public class grassSwag : MonoBehaviour {
         }
         else
         {
-            anim.speed = Random.Range(0.7f, 1.2f);
-            swagTime = 60;
+            anim.speed = Random.Range(0.5f, 2f);
+            swagTime = Random.Range(60f, 180f);
         }
 
 
