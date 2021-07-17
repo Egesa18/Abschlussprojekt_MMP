@@ -15,7 +15,9 @@ public class guiBehaviour : MonoBehaviour
     private GameObject scoreObject2;
     private GameObject itemFrame;
     private int selected;
-    public int shotsLeft;
+    public int shotsLeftVac1;
+    public int shotsLeftVac2;
+    public int shotsLeftVac3;
     public int points_score;
     private int coins;
     private float counter;
@@ -35,8 +37,11 @@ public class guiBehaviour : MonoBehaviour
         scoreObject1 = GameObject.Find("points_score");
         scoreObject2 = GameObject.Find("coins");
         itemFrame = GameObject.Find("ItemFrame");
+        itemFrame.transform.position = vaccine1.transform.position;
         selected = 1;
-        shotsLeft = 5;
+        shotsLeftVac1 = 5;
+        shotsLeftVac2 = 5;
+        shotsLeftVac3 = 5;
         points_score = 0;
         counter = 0.0f;
         timer = 0.0f;
@@ -68,8 +73,19 @@ public class guiBehaviour : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0))
         {
-            shotsLeft--;
-            Debug.Log("Shots " + shotsLeft);
+            if (selected == 1)
+            {
+                shotsLeftVac1--;
+            }
+            else if (selected == 2)
+            {
+                shotsLeftVac2--;
+            }
+            else if (selected == 3)
+            {
+                shotsLeftVac3--;
+            }
+            Debug.Log("Shots1 " + shotsLeftVac1 + " Shots2 " + shotsLeftVac2 + " Shots3 " + shotsLeftVac3);
         }
     }
 
@@ -109,6 +125,17 @@ public class guiBehaviour : MonoBehaviour
 
     public void reload()
     {
-        shotsLeft = 5;
+        if (selected == 1)
+        {
+            shotsLeftVac1=5;
+        }
+        else if (selected == 2)
+        {
+            shotsLeftVac2=5;
+        }
+        else if (selected == 3)
+        {
+            shotsLeftVac3=5;
+        }
     }
 }
