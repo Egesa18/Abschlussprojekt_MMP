@@ -5,7 +5,7 @@ using UnityEngine;
 public class npcSpawnController : MonoBehaviour
 {
     [SerializeField] private List<GameObject> aluhutPrefabs;
-    [SerializeField] private float spawnTime = 1.0f;  // how often do we spawn ( editable in inspector)
+    [SerializeField] private float spawnTime;  // how often do we spawn ( editable in inspector)
     float counter = 0.0f;
 
     //private Vector2 screenBounds;
@@ -35,6 +35,7 @@ public class npcSpawnController : MonoBehaviour
         if (counter >= spawnTime )
         {
             counter = 0.0f;
+            spawnTime = Random.Range(0.5f,3f);
             
             Vector2 spawnPosition = new Vector2(Random.Range(xmin, xmax), Random.Range(ymin, ymax));
             GameObject aluhutPerson = Instantiate<GameObject>(aluhutPrefabs[Random.Range(0, aluhutPrefabs.Count)]);
