@@ -258,7 +258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28054748}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -726.2815, y: 12.334813, z: -6616.5723}
+  m_LocalPosition: {x: 8, y: 427, z: -6616.5723}
   m_LocalScale: {x: 73.200005, y: 73.200005, z: 73.200005}
   m_Children: []
   m_Father: {fileID: 434884946}
@@ -391,9 +391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aluhutPrefabs:
-  - {fileID: 1105837956759040, guid: f31fb566307b463498f311cee18dac07, type: 3}
-  - {fileID: 1023704210731312, guid: 0b50b221a0513d8478712a57f0ae2432, type: 3}
-  - {fileID: 1337956163056606, guid: 513a08669601e7e4a8e38fcaf714c18a, type: 3}
+  - {fileID: 1127201255718994, guid: a8a128c7bf0083645ae7193d0cb46d2d, type: 3}
   - {fileID: 1336953551914666, guid: 2959c4ab942d0fc48be373a20d14f013, type: 3}
   spawnTime: 1
 --- !u!4 &41654865
@@ -2658,7 +2656,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775324496}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.026249, y: -1.8286643, z: -1.5767894}
+  m_LocalPosition: {x: 0.18, y: 1.03, z: -1.5767894}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1460273477}
@@ -2676,6 +2674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 306f831a93d3c7e468ce4f7afd6a9d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
   guiScript: {fileID: 434884947}
 --- !u!82 &775324499
 AudioSource:
