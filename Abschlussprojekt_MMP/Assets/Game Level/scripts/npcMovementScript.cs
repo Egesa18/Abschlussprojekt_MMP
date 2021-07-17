@@ -9,6 +9,7 @@ public class npcMovementScript : MonoBehaviour
     [SerializeField] private float speed = 1f;
     // Max Values for level bounds of NPCs
     [SerializeField] private float xmin, xmax, ymin, ymax;
+    private Vector2 vel;
     private Rigidbody2D rigBod;
     private Animator animations;
     private float passedTime;
@@ -22,7 +23,9 @@ public class npcMovementScript : MonoBehaviour
         switchTime = Random.Range(1f, 4f);
 
         //I think it's better when the NPCs move frome the getgo ond only have a chance to stand for a moment later
-        rigBod.velocity = new Vector2(speed * Random.Range(-1f, 1f), speed * Random.Range(-1f, 1f)); 
+        vel = new Vector2(speed * Random.Range(-1f, 1f), speed * Random.Range(-1f, 1f));
+        vel.Normalize();
+        rigBod.velocity = vel * speed;
         animations.SetBool("isRunning", true);
     }
 
@@ -37,7 +40,9 @@ public class npcMovementScript : MonoBehaviour
         {
             if (TakeARest(0.50f))
             {
-                rigBod.velocity = new Vector2(speed * -1, speed * Random.Range(-0.6f, 0.6f));
+                vel = new Vector2(-1, Random.Range(-0.6f, 0.6f));
+                vel.Normalize();
+                rigBod.velocity = vel * speed;
                 animations.SetBool("isRunning", true);
                 ResetTimers();
             }
@@ -46,7 +51,9 @@ public class npcMovementScript : MonoBehaviour
         {
             if (TakeARest(0.50f))
             {
-                rigBod.velocity = new Vector2(speed * Random.Range(-1f, 1f), speed * Random.Range(-0.6f,0f));
+                vel = new Vector2(Random.Range(-1f, 1f),Random.Range(-0.6f,0f));
+                vel.Normalize();
+                rigBod.velocity = vel * speed;
                 animations.SetBool("isRunning", true);
                 ResetTimers();
             }
@@ -56,7 +63,9 @@ public class npcMovementScript : MonoBehaviour
         {
             if (TakeARest(0.50f))
             {
-                rigBod.velocity = new Vector2(speed * 1, speed * Random.Range(-0.6f, 0.6f));
+                vel = new Vector2(1,Random.Range(-0.6f, 0.6f));
+                vel.Normalize();
+                rigBod.velocity = vel * speed;
                 animations.SetBool("isRunning", true);
                 ResetTimers();
             }
@@ -66,7 +75,9 @@ public class npcMovementScript : MonoBehaviour
         {
             if (TakeARest(0.50f))
             {
-                rigBod.velocity = new Vector2(speed * Random.Range(-1f, 1f), speed * Random.Range(0.6f, 0f));
+                vel = new Vector2(Random.Range(-1f, 1f), Random.Range(0.6f, 0f));
+                vel.Normalize();
+                rigBod.velocity = vel * speed;
                 animations.SetBool("isRunning", true);
                 ResetTimers();
             }
@@ -79,7 +90,9 @@ public class npcMovementScript : MonoBehaviour
         if (passedTime > switchTime)
         {
             if(TakeARest(0.50f)){
-                rigBod.velocity = new Vector2(speed * Random.Range(-0.6f, 0.6f), speed * Random.Range(-0.6f, 0.6f));
+                vel = new Vector2(Random.Range(-0.6f, 0.6f), Random.Range(-0.6f, 0.6f));
+                vel.Normalize();
+                rigBod.velocity = vel * speed;
                 animations.SetBool("isRunning", true);
                 ResetTimers();
             }
