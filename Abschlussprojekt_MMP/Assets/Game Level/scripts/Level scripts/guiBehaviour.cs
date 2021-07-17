@@ -14,7 +14,7 @@ public class guiBehaviour : MonoBehaviour
     private GameObject scoreObject1;
     private GameObject scoreObject2;
     private GameObject itemFrame;
-    private int selected;
+    public int selected;
     public int shotsLeftVac1;
     public int shotsLeftVac2;
     public int shotsLeftVac3;
@@ -22,7 +22,24 @@ public class guiBehaviour : MonoBehaviour
     private int coins;
     private float counter;
     private float timer;
-   
+
+
+    private GameObject vac1s1;
+    private GameObject vac1s2;
+    private GameObject vac1s3;
+    private GameObject vac1s4;
+    private GameObject vac1s5;
+    private GameObject vac2s1;
+    private GameObject vac2s2;
+    private GameObject vac2s3;
+    private GameObject vac2s4;
+    private GameObject vac2s5;
+    private GameObject vac3s1;
+    private GameObject vac3s2;
+    private GameObject vac3s3;
+    private GameObject vac3s4;
+    private GameObject vac3s5;
+
 
 
     // Start is called before the first frame update
@@ -45,6 +62,24 @@ public class guiBehaviour : MonoBehaviour
         points_score = 0;
         counter = 0.0f;
         timer = 0.0f;
+
+
+        vac1s1 = GameObject.Find("vac1s1");
+        vac1s2 = GameObject.Find("vac1s2");
+        vac1s3 = GameObject.Find("vac1s3");
+        vac1s4 = GameObject.Find("vac1s4");
+        vac1s5 = GameObject.Find("vac1s5");
+        vac2s1 = GameObject.Find("vac2s1");
+        vac2s2 = GameObject.Find("vac2s2");
+        vac2s3 = GameObject.Find("vac2s3");
+        vac2s4 = GameObject.Find("vac2s4");
+        vac2s5 = GameObject.Find("vac2s5");
+        vac3s1 = GameObject.Find("vac3s1");
+        vac3s2 = GameObject.Find("vac3s2");
+        vac3s3 = GameObject.Find("vac3s3");
+        vac3s4 = GameObject.Find("vac3s4");
+        vac3s5 = GameObject.Find("vac3s5");
+
     }
 
     // Update is called once per frame
@@ -73,20 +108,21 @@ public class guiBehaviour : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0))
         {
-            if (selected == 1)
+            if (selected == 1 && shotsLeftVac1 > 0)
             {
                 shotsLeftVac1--;
             }
-            else if (selected == 2)
+            else if (selected == 2 && shotsLeftVac2 > 0)
             {
                 shotsLeftVac2--;
             }
-            else if (selected == 3)
+            else if (selected == 3 && shotsLeftVac3 > 0)
             {
                 shotsLeftVac3--;
             }
             Debug.Log("Shots1 " + shotsLeftVac1 + " Shots2 " + shotsLeftVac2 + " Shots3 " + shotsLeftVac3);
         }
+        showShots();
     }
 
     void FixedUpdate()
@@ -137,5 +173,213 @@ public class guiBehaviour : MonoBehaviour
         {
             shotsLeftVac3=5;
         }
+    }
+
+    public void showShots()
+    {
+        if (selected == 1)
+        {
+            hideVac2();
+            hideVac3();
+            showShotsLeft1();
+        }
+        else if (selected == 2)
+        {
+            hideVac1();
+            hideVac3();
+            showShotsLeft2();
+        }
+        else if (selected == 3)
+        {
+            hideVac1();
+            hideVac2();
+            showShotsLeft3();
+        }
+    }
+
+
+
+
+    public void showShotsLeft1()
+    {
+        if (shotsLeftVac1 == 5)
+        {
+            vac1s1.SetActive(true);
+            vac1s2.SetActive(true);
+            vac1s3.SetActive(true);
+            vac1s4.SetActive(true);
+            vac1s5.SetActive(true);
+        }
+        else if (shotsLeftVac1 == 4)
+        {
+            vac1s1.SetActive(true);
+            vac1s2.SetActive(true);
+            vac1s3.SetActive(true);
+            vac1s4.SetActive(true);
+            vac1s5.SetActive(false);
+        }
+        else if (shotsLeftVac1 == 3)
+        {
+            vac1s1.SetActive(true);
+            vac1s2.SetActive(true);
+            vac1s3.SetActive(true);
+            vac1s4.SetActive(false);
+            vac1s5.SetActive(false);
+        }
+        else if (shotsLeftVac1 == 2)
+        {
+            vac1s1.SetActive(true);
+            vac1s2.SetActive(true);
+            vac1s3.SetActive(false);
+            vac1s4.SetActive(false);
+            vac1s5.SetActive(false);
+        }
+        else if (shotsLeftVac1 == 1)
+        {
+            vac1s1.SetActive(true);
+            vac1s2.SetActive(false);
+            vac1s3.SetActive(false);
+            vac1s4.SetActive(false);
+            vac1s5.SetActive(false);
+        }
+        else if (shotsLeftVac1 == 0)
+        {
+            vac1s1.SetActive(false);
+            vac1s2.SetActive(false);
+            vac1s3.SetActive(false);
+            vac1s4.SetActive(false);
+            vac1s5.SetActive(false);
+        }
+    }
+
+    public void showShotsLeft2()
+    {
+        if (shotsLeftVac2 == 5)
+        {
+            vac2s1.SetActive(true);
+            vac2s2.SetActive(true);
+            vac2s3.SetActive(true);
+            vac2s4.SetActive(true);
+            vac2s5.SetActive(true);
+        }
+        else if (shotsLeftVac2 == 4)
+        {
+            vac2s1.SetActive(true);
+            vac2s2.SetActive(true);
+            vac2s3.SetActive(true);
+            vac2s4.SetActive(true);
+            vac2s5.SetActive(false);
+        }
+        else if (shotsLeftVac2 == 3)
+        {
+            vac2s1.SetActive(true);
+            vac2s2.SetActive(true);
+            vac2s3.SetActive(true);
+            vac2s4.SetActive(false);
+            vac2s5.SetActive(false);
+        }
+        else if (shotsLeftVac1 == 2)
+        {
+            vac1s1.SetActive(true);
+            vac1s2.SetActive(true);
+            vac1s3.SetActive(false);
+            vac1s4.SetActive(false);
+            vac1s5.SetActive(false);
+        }
+        else if (shotsLeftVac2 == 1)
+        {
+            vac2s1.SetActive(true);
+            vac2s2.SetActive(false);
+            vac2s3.SetActive(false);
+            vac2s4.SetActive(false);
+            vac2s5.SetActive(false);
+        }
+        else if (shotsLeftVac2 == 0)
+        {
+            vac2s1.SetActive(false);
+            vac2s2.SetActive(false);
+            vac2s3.SetActive(false);
+            vac2s4.SetActive(false);
+            vac2s5.SetActive(false);
+        }
+    }
+
+    public void showShotsLeft3()
+    {
+        if (shotsLeftVac3 == 5)
+        {
+            vac3s1.SetActive(true);
+            vac3s2.SetActive(true);
+            vac3s3.SetActive(true);
+            vac3s4.SetActive(true);
+            vac3s5.SetActive(true);
+        }
+        else if (shotsLeftVac3 == 4)
+        {
+            vac3s1.SetActive(true);
+            vac3s2.SetActive(true);
+            vac3s3.SetActive(true);
+            vac3s4.SetActive(true);
+            vac3s5.SetActive(false);
+        }
+        else if (shotsLeftVac3 == 3)
+        {
+            vac3s1.SetActive(true);
+            vac3s2.SetActive(true);
+            vac3s3.SetActive(true);
+            vac3s4.SetActive(false);
+            vac3s5.SetActive(false);
+        }
+        else if (shotsLeftVac3 == 2)
+        {
+            vac3s1.SetActive(true);
+            vac3s2.SetActive(true);
+            vac3s3.SetActive(false);
+            vac3s4.SetActive(false);
+            vac3s5.SetActive(false);
+        }
+        else if (shotsLeftVac3 == 1)
+        { 
+            vac3s1.SetActive(true);
+            vac3s2.SetActive(false);
+            vac3s3.SetActive(false);
+            vac3s4.SetActive(false);
+            vac3s5.SetActive(false);
+        }
+        else if (shotsLeftVac3 == 0)
+        {
+            vac3s1.SetActive(false);
+            vac3s2.SetActive(false);
+            vac3s3.SetActive(false);
+            vac3s4.SetActive(false);
+            vac3s5.SetActive(false);
+        }
+    }
+
+    public void hideVac1()
+    {
+        vac1s1.SetActive(false);
+        vac1s2.SetActive(false);
+        vac1s3.SetActive(false);
+        vac1s4.SetActive(false);
+        vac1s5.SetActive(false);
+    }
+
+    public void hideVac2()
+    {
+        vac2s1.SetActive(false);
+        vac2s2.SetActive(false);
+        vac2s3.SetActive(false);
+        vac2s4.SetActive(false);
+        vac2s5.SetActive(false);
+    }
+
+    public void hideVac3()
+    {
+        vac3s1.SetActive(false);
+        vac3s2.SetActive(false);
+        vac3s3.SetActive(false);
+        vac3s4.SetActive(false);
+        vac3s5.SetActive(false);
     }
 }
