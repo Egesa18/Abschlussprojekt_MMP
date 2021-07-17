@@ -13,6 +13,9 @@ public class guiBehaviour : MonoBehaviour
     private GameObject vaccine3;
     private GameObject scoreObject1;
     private GameObject scoreObject2;
+    private GameObject itemFrame;
+    private int selected;
+    public int shotsLeft;
     public int points_score;
     private int coins;
     private float counter;
@@ -31,6 +34,9 @@ public class guiBehaviour : MonoBehaviour
         vaccine3 = GameObject.Find("vaccine3");
         scoreObject1 = GameObject.Find("points_score");
         scoreObject2 = GameObject.Find("coins");
+        itemFrame = GameObject.Find("ItemFrame");
+        selected = 1;
+        shotsLeft = 5;
         points_score = 0;
         counter = 0.0f;
         timer = 0.0f;
@@ -41,6 +47,30 @@ public class guiBehaviour : MonoBehaviour
     {
         scoreObject1.GetComponent<Text>().text = "SCORE: " + points_score.ToString();
         scoreObject2.GetComponent<Text>().text = "Coins: " + coins.ToString();
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Vector3 pos = vaccine1.transform.position;
+            selectVac(1, pos);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Vector3 pos = vaccine2.transform.position;
+            selectVac(2, pos);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            Vector3 pos = vaccine3.transform.position;
+            selectVac(3, pos);
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            reload();
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            shotsLeft--;
+            Debug.Log("Shots " + shotsLeft);
+        }
     }
 
     void FixedUpdate()
@@ -67,5 +97,18 @@ public class guiBehaviour : MonoBehaviour
     {
         this.points_score += pointsIncrement;
         
+    }
+
+    public void selectVac(int keyNr, Vector3 pos)
+    {
+        itemFrame.transform.position = pos;
+        selected = keyNr;
+        Debug.Log("Key pressed " + keyNr);
+    }
+
+
+    public void reload()
+    {
+        shotsLeft = 5;
     }
 }
