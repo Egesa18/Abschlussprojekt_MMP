@@ -6,9 +6,11 @@ using UnityEngine.Rendering;
 public class RenderPosition : MonoBehaviour
 {
     //Used to offset the order in layer based on objects y coordinate 
-    [SerializeField]
-    private int sortingOrderOffset = 10000;
+    [SerializeField] private int sortingOrderOffset = 10000;
+    [SerializeField] private bool onlyOnce = false;
+    [SerializeField] private float offset = 0;
     private Renderer myRenderer;
+
 
     void Awake()
     {
@@ -19,6 +21,10 @@ public class RenderPosition : MonoBehaviour
     void LateUpdate()
     {
         //sets the specific sorting order in that layer to a common sortingOrderOffset, depending on the where the object is located in the scene (lower y value generally means the object is closer to the camera and is thus rendered first)
-        myRenderer.sortingOrder = (int)(sortingOrderOffset - transform.position.y*100);
+        myRenderer.sortingOrder = (int)(sortingOrderOffset - (transform.position.y-offset)*100);
+        if (onlyOnce)
+        {
+            Destroy(this);
+        }
     }
 }
