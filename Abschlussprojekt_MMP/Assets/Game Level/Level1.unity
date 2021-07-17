@@ -274,7 +274,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 36ccdb1a2595481438bfafe506ccc05d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ed9769b5e904eed4aa57cba27d85ba3f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -394,6 +394,10 @@ MonoBehaviour:
   - {fileID: 1127201255718994, guid: a8a128c7bf0083645ae7193d0cb46d2d, type: 3}
   - {fileID: 1336953551914666, guid: 2959c4ab942d0fc48be373a20d14f013, type: 3}
   spawnTime: 1
+  xmin: -10
+  xmax: 35
+  ymin: -4.6
+  ymax: 0.75
 --- !u!4 &41654865
 Transform:
   m_ObjectHideFlags: 0
@@ -418,7 +422,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 409d51f961f5efe4fb344897d1138bae, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 19402269ae6a7d644be8579246db484d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2674,7 +2678,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 306f831a93d3c7e468ce4f7afd6a9d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
   guiScript: {fileID: 434884947}
 --- !u!82 &775324499
 AudioSource:

@@ -7,7 +7,10 @@ public class npcSpawnController : MonoBehaviour
     [SerializeField] private List<GameObject> aluhutPrefabs;
     [SerializeField] private float spawnTime = 1.0f;  // how often do we spawn ( editable in inspector)
     float counter = 0.0f;
-    private Vector2 screenBounds;
+
+    //private Vector2 screenBounds;
+    [SerializeField] private float xmin, xmax, ymin, ymax;
+
     AudioSource spawningSound;
 
     // Start is called before the first frame update
@@ -16,7 +19,9 @@ public class npcSpawnController : MonoBehaviour
     void Start()
     {
         spawningSound = GetComponent<AudioSource>();
-        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0.0f));
+        //Why don't we just manually define the spawning area
+        //screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0.0f));
+
     }
 
 
@@ -31,18 +36,18 @@ public class npcSpawnController : MonoBehaviour
         {
             counter = 0.0f;
             
-            Vector2 spawnPosition = new Vector2(Random.Range(-screenBounds.x, screenBounds.x), Random.Range(-screenBounds.y * 0.5f, -screenBounds.y * 0.04f));
+            Vector2 spawnPosition = new Vector2(Random.Range(xmin, xmax), Random.Range(ymin, ymax));
             GameObject aluhutPerson = Instantiate<GameObject>(aluhutPrefabs[Random.Range(0, aluhutPrefabs.Count)]);
             aluhutPerson.transform.position = spawnPosition;
+            spawningSound.Play();
 
+            /* Why would we need this? 
             if (aluhutPerson.transform.position.x > 0.0f && aluhutPerson.transform.position.x < screenBounds.x)
             {
                 spawningSound.Play();
                // Debug.Log(aluhutPerson.transform.position.x);
             }
-         
-           
-            //aluhutPerson.hat.GetComponent<SpriteRenderer>().sortingLayerID = SortingLayer.NameToID("Prefabs");
+            */
         }
 
     }
