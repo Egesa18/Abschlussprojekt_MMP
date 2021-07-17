@@ -37,7 +37,7 @@ public class npcMovementScript : MonoBehaviour
         {
             if (TakeARest(0.50f))
             {
-                rigBod.velocity = new Vector2(speed * -1, speed * Random.Range(-1f, 1f));
+                rigBod.velocity = new Vector2(speed * -1, speed * Random.Range(-0.6f, 0.6f));
                 animations.SetBool("isRunning", true);
                 ResetTimers();
             }
@@ -46,7 +46,7 @@ public class npcMovementScript : MonoBehaviour
         {
             if (TakeARest(0.50f))
             {
-                rigBod.velocity = new Vector2(speed * Random.Range(-1f, 1f), speed * -1);
+                rigBod.velocity = new Vector2(speed * Random.Range(-1f, 1f), speed * Random.Range(-0.6f,0f));
                 animations.SetBool("isRunning", true);
                 ResetTimers();
             }
@@ -56,7 +56,7 @@ public class npcMovementScript : MonoBehaviour
         {
             if (TakeARest(0.50f))
             {
-                rigBod.velocity = new Vector2(speed * 1, speed * Random.Range(-1f, 1f));
+                rigBod.velocity = new Vector2(speed * 1, speed * Random.Range(-0.6f, 0.6f));
                 animations.SetBool("isRunning", true);
                 ResetTimers();
             }
@@ -66,7 +66,7 @@ public class npcMovementScript : MonoBehaviour
         {
             if (TakeARest(0.50f))
             {
-                rigBod.velocity = new Vector2(speed * Random.Range(-1f, 1f), speed * 1);
+                rigBod.velocity = new Vector2(speed * Random.Range(-1f, 1f), speed * Random.Range(0.6f, 0f));
                 animations.SetBool("isRunning", true);
                 ResetTimers();
             }
@@ -79,7 +79,7 @@ public class npcMovementScript : MonoBehaviour
         if (passedTime > switchTime)
         {
             if(TakeARest(0.50f)){
-                rigBod.velocity = new Vector2(speed * Random.Range(-1f, 1f), speed * Random.Range(-1f, 1f));
+                rigBod.velocity = new Vector2(speed * Random.Range(-0.6f, 0.6f), speed * Random.Range(-0.6f, 0.6f));
                 animations.SetBool("isRunning", true);
                 ResetTimers();
             }
