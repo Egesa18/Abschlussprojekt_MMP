@@ -118,6 +118,8 @@ public class guiBehaviour : MonoBehaviour
         } else if (counter >= 0.05f)
         {
             SceneManager.LoadScene("Main Menu");
+            GameObject ThemeSound = GameObject.FindGameObjectWithTag("Player");
+            Destroy(ThemeSound);
             Cursor.visible = true;
         }
         timerFront.transform.localScale = new Vector2(counter, 0.5f);
