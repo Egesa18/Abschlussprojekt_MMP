@@ -47,7 +47,7 @@ public class npcSpawnController : MonoBehaviour
             /*if (endScreen.activeSelf == true)
             {
                 spawningSound.Stop();
-            }*/
+            }
 
 
             /* Why would we need this? 
