@@ -7,6 +7,7 @@ public class npcSpawnController : MonoBehaviour
     [SerializeField] private List<GameObject> aluhutPrefabs;
     [SerializeField] private float spawnTime;  // how often do we spawn ( editable in inspector)
     float counter = 0.0f;
+    public GameObject endScreen;
 
     //private Vector2 screenBounds;
     [SerializeField] private float xmin, xmax, ymin, ymax;
@@ -18,9 +19,7 @@ public class npcSpawnController : MonoBehaviour
 
     void Start()
     {
-        spawningSound = GetComponent<AudioSource>();
-        //Why don't we just manually define the spawning area
-        //screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0.0f));
+        spawningSound = GetComponent<AudioSource>();        
 
     }
 
@@ -32,7 +31,7 @@ public class npcSpawnController : MonoBehaviour
     void Update()
     {
         counter += Time.deltaTime;
-        if (counter >= spawnTime )
+        if (counter >= spawnTime && endScreen.activeSelf == false )
         {
             counter = 0.0f;
             spawnTime = Random.Range(0.5f,3f);
@@ -41,14 +40,6 @@ public class npcSpawnController : MonoBehaviour
             GameObject aluhutPerson = Instantiate<GameObject>(aluhutPrefabs[Random.Range(0, aluhutPrefabs.Count)]);
             aluhutPerson.transform.position = spawnPosition;
             spawningSound.Play();
-
-            /* Why would we need this? 
-            if (aluhutPerson.transform.position.x > 0.0f && aluhutPerson.transform.position.x < screenBounds.x)
-            {
-                spawningSound.Play();
-               // Debug.Log(aluhutPerson.transform.position.x);
-            }
-            */
         }
 
     }

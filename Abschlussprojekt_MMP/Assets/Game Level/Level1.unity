@@ -858,6 +858,7 @@ MonoBehaviour:
   - {fileID: 1127201255718994, guid: a8a128c7bf0083645ae7193d0cb46d2d, type: 3}
   - {fileID: 1336953551914666, guid: 2959c4ab942d0fc48be373a20d14f013, type: 3}
   spawnTime: 1
+  endScreen: {fileID: 752780864}
   xmin: -10
   xmax: 35
   ymin: -4.6
@@ -7702,6 +7703,7 @@ MonoBehaviour:
   shotsLeftVac2: 0
   shotsLeftVac3: 0
   points_score: 0
+  endScreen: {fileID: 0}
 --- !u!1 &440110223
 GameObject:
   m_ObjectHideFlags: 0
@@ -38550,6 +38552,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1861420732}
+  - component: {fileID: 1861420733}
   m_Layer: 0
   m_Name: ScoreManager
   m_TagString: Untagged
@@ -38571,6 +38574,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1861420733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861420731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14c0b27a294776b4b8f8d5d51aa13a37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreboard_highscore_text: {fileID: 1503523879}
+  scoreboard_score_text: {fileID: 1943316688}
+  score: 0
+  highscore: 0
 --- !u!1 &1865634952
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,6 +23,8 @@ public class guiBehaviour : MonoBehaviour
     private float counter;
     private float timer;
 
+    public GameObject endScreen;
+
 
     private GameObject ammo1;
     private GameObject ammo2;
@@ -117,7 +119,8 @@ public class guiBehaviour : MonoBehaviour
             counter = timer / 60.0f;
         } else if (counter >= 0.05f)
         {
-            SceneManager.LoadScene("Main Menu");
+            //SceneManager.LoadScene("Main Menu");
+            endScreen.SetActive(true);
             GameObject ThemeSound = GameObject.FindGameObjectWithTag("Player");
             Destroy(ThemeSound);
             Cursor.visible = true;
