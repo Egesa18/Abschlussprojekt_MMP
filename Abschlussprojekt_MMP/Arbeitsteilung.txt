@@ -1,5 +1,5 @@
 **Arbeitsteilung**
 
-1.
-2.
-3.
+1.Sebastian Walz: Rendering order/Order in layer/Level Composit; NPC Rigging & animations + NPC & Camera movement system
+2.Patrick Paetsch: GUI; Hit Detection; Player Interaction
+3.Egesa Vrapi:Menus; NPC Spawning; Sound High Score-System
