@@ -37,5 +37,11 @@ public void StartGame()
        
     }
 
+    public void StopSound()
+    {
+        GameObject ThemeSound = GameObject.FindGameObjectWithTag("Player");
+        Destroy(ThemeSound);
+    }
+
 }
 
