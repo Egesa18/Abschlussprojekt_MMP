@@ -40,6 +40,7 @@ public class scoreController : MonoBehaviour
         score += increment;
         PlayBonusSound();
         updateHighscore();
+
         scoreboard_score_text.text = score.ToString();
 
 
@@ -50,7 +51,7 @@ public class scoreController : MonoBehaviour
 
     public void PlayBonusSound()
     {
-        if(score==highscore){
+        if(score>=highscore){
             bonusSound.Play();
         }
         
@@ -58,9 +59,11 @@ public class scoreController : MonoBehaviour
 
     public void updateHighscore()
     {
-  
+        bonusSound.Stop();
+
         if (score > highscore)
         {
+           
 
             highscore = score;
             scoreboard_highscore_text.text = highscore.ToString();
