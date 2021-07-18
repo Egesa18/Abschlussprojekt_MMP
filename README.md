@@ -18,6 +18,7 @@
 - Shoot NPCs with Left Mouse Button
 - Change Ammo with Numbers 1,2 and 3
 - Open Help with 0
+- Reload with R
 
 ## Built With
 
