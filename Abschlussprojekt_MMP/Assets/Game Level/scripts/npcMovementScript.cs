@@ -9,6 +9,10 @@ public class npcMovementScript : MonoBehaviour
     [SerializeField] private float speed = 1f;
     // Max Values for level bounds of NPCs
     [SerializeField] private float xmin, xmax, ymin, ymax;
+    [SerializeField] private float house1xmin, house1xmax, house1ymin, house1ymax;
+    [SerializeField] private float house2xmin, house2xmax, house2ymin, house2ymax;
+    //[SerializeField] private bool letMeExitHorizontallyPlx = true;
+    //[SerializeField] private bool letMeExitVerticallyPlx = true;
     private Vector2 vel;
     private Rigidbody2D rigBod;
     private Animator animations;
@@ -32,10 +36,68 @@ public class npcMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // This section is designed to not let the NPC escape the playing area
-        // Once the NPC moved too far towards the level bounds (defined in xmin/max, ymin/max)
-        // It is forced to move back towards the playing area ... I plan to only limit this on solid objects
-        // like the top buildings, so some NPCs may actually escape bottom/left/right to make it harder for the player
+        /* Experimental approach to make houses and other props avoiding areas, glitches with too high velocity though, and the bools intended to not stop the npc from coming back into the area cant prevent it from then moving out the other bounds in the mean time ...
+        if ((this.transform.position.x > xmax && letMeExitHorizontallyPlx) || (this.transform.position.y > ymax && letMeExitVerticallyPlx) || (this.transform.position.x < xmin && letMeExitHorizontallyPlx) || (this.transform.position.y < ymin && letMeExitVerticallyPlx))
+        {
+            vel = new Vector2(0, 0);
+            if (rigBod.velocity.x <= 0)
+            {
+                vel.x = Random.Range(0.3f, 1f);
+                letMeExitHorizontallyPlx = false;
+            }
+            else
+            {
+                vel.x = Random.Range(-0.3f, -1f);
+                letMeExitHorizontallyPlx = false;
+            }
+
+            if (rigBod.velocity.y <= 0)
+            {
+                vel.y = Random.Range(0.3f, 1f);
+                letMeExitVerticallyPlx = false;
+}
+            else
+            {
+                vel.y = Random.Range(-0.3f, -0.6f);
+                letMeExitVerticallyPlx = false;
+            }
+            vel.Normalize();
+            rigBod.velocity = vel * speed;
+            animations.SetBool("isRunning", true);
+            ResetTimers();
+        }
+
+        if (((house1xmin < this.transform.position.x && this.transform.position.x < house1xmax) && letMeExitVerticallyPlx) && ((house1ymin < this.transform.position.y && this.transform.position.y < house1ymax) && letMeExitHorizontallyPlx))
+        {
+            vel = new Vector2(0, 0);
+            if (rigBod.velocity.x <= 0)
+            {
+                vel.x = Random.Range(0.1f, 1f);
+                letMeExitHorizontallyPlx = false;
+            }
+            else
+            {
+                vel.x = Random.Range(0.1f, -1f);
+                letMeExitHorizontallyPlx = false;
+            }
+
+            if (rigBod.velocity.y <= 0)
+            {
+                vel.y = Random.Range(0.1f, 1f);
+                letMeExitVerticallyPlx = false;
+            }
+            else
+            {
+                vel.y = Random.Range(0.1f, -0.6f);
+                letMeExitVerticallyPlx = false;
+            }
+            vel.Normalize();
+            rigBod.velocity = vel * speed;
+            animations.SetBool("isRunning", true);
+            ResetTimers();
+            letMeExitHorizontallyPlx = false;
+        } */
+
         if(this.transform.position.x > xmax)
         {
             if (TakeARest(0.50f))
@@ -95,6 +157,8 @@ public class npcMovementScript : MonoBehaviour
                 rigBod.velocity = vel * speed;
                 animations.SetBool("isRunning", true);
                 ResetTimers();
+                //letMeExitHorizontallyPlx = true;
+                //letMeExitVerticallyPlx = true;
             }
         }
 
@@ -113,6 +177,8 @@ public class npcMovementScript : MonoBehaviour
             rigBod.velocity = new Vector2(0, 0);
             animations.SetBool("isRunning", false);
             ResetTimers();
+            //letMeExitHorizontallyPlx = true;
+            //letMeExitVerticallyPlx = true;
             return false;
         } else
         {

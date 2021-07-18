@@ -20,7 +20,12 @@ public class npcSpawnController : MonoBehaviour
     void Start()
     {
         spawningSound = GetComponent<AudioSource>();        
-
+        for(int i = 1; i< 7; i++)
+        {
+            Vector2 spawnPosition = new Vector2(Random.Range(xmin, xmax), Random.Range(ymin, ymax));
+            GameObject aluhutPerson = Instantiate<GameObject>(aluhutPrefabs[Random.Range(0, aluhutPrefabs.Count)]);
+            aluhutPerson.transform.position = spawnPosition;
+        }
     }
 
 

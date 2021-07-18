@@ -379,10 +379,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  xmin: -10
+  xmin: -25
   xmax: 35
   ymin: -4.6
   ymax: 0.75
+  house1xmin: 0
+  house1xmax: 0
+  house1ymin: 0
+  house1ymax: 0
+  house2xmin: 0
+  house2xmax: 0
+  house2ymin: 0
+  house2ymax: 0
 --- !u!1 &1652049673880962
 GameObject:
   m_ObjectHideFlags: 0
