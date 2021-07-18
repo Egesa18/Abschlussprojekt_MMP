@@ -7,6 +7,7 @@ public class npcSpawnController : MonoBehaviour
     [SerializeField] private List<GameObject> aluhutPrefabs;
     [SerializeField] private float spawnTime;  // how often do we spawn ( editable in inspector)
     float counter = 0.0f;
+    public GameObject endScreen;
 
     //private Vector2 screenBounds;
     [SerializeField] private float xmin, xmax, ymin, ymax;
@@ -32,7 +33,7 @@ public class npcSpawnController : MonoBehaviour
     void Update()
     {
         counter += Time.deltaTime;
-        if (counter >= spawnTime )
+        if (counter >= spawnTime && endScreen.activeSelf == false)
         {
             counter = 0.0f;
             spawnTime = Random.Range(0.5f,3f);
@@ -40,7 +41,14 @@ public class npcSpawnController : MonoBehaviour
             Vector2 spawnPosition = new Vector2(Random.Range(xmin, xmax), Random.Range(ymin, ymax));
             GameObject aluhutPerson = Instantiate<GameObject>(aluhutPrefabs[Random.Range(0, aluhutPrefabs.Count)]);
             aluhutPerson.transform.position = spawnPosition;
-            spawningSound.Play();
+             spawningSound.Play();
+            
+
+            /*if (endScreen.activeSelf == true)
+            {
+                spawningSound.Stop();
+            }*/
+
 
             /* Why would we need this? 
             if (aluhutPerson.transform.position.x > 0.0f && aluhutPerson.transform.position.x < screenBounds.x)

@@ -13,6 +13,11 @@ public class guiBehaviour : MonoBehaviour
     private GameObject vaccine3;
     private GameObject scoreObject1;
     private GameObject scoreObject2;
+    public GameObject endScreen;
+    public scoreController scroreController;
+
+
+
     public int points_score;
     private int coins;
     private float counter;
@@ -31,7 +36,10 @@ public class guiBehaviour : MonoBehaviour
         vaccine3 = GameObject.Find("vaccine3");
         scoreObject1 = GameObject.Find("points_score");
         scoreObject2 = GameObject.Find("coins");
+        
         points_score = 0;
+       
+        //highscore = PlayerPrefs.GetInt("highscore", 0);
         counter = 0.0f;
         timer = 0.0f;
     }
@@ -41,6 +49,7 @@ public class guiBehaviour : MonoBehaviour
     {
         scoreObject1.GetComponent<Text>().text = "SCORE: " + points_score.ToString();
         scoreObject2.GetComponent<Text>().text = "Coins: " + coins.ToString();
+       
     }
 
     void FixedUpdate()
@@ -57,7 +66,14 @@ public class guiBehaviour : MonoBehaviour
             counter = timer / 60.0f;
         } else if (counter >= 0.05f)
         {
-            SceneManager.LoadScene("Main Menu");
+            //SceneManager.LoadScene("Scoreboard");
+            endScreen.SetActive(true);
+           
+    
+
+
+
+
             Cursor.visible = true;
         }
         timerFront.transform.localScale = new Vector2(counter, 0.5f);
@@ -66,6 +82,9 @@ public class guiBehaviour : MonoBehaviour
     public void manipulateScore(int pointsIncrement)
     {
         this.points_score += pointsIncrement;
-        
+      
+        //  PlayerPrefs.SetInt("highscore", points_score);
+
     }
+  
 }

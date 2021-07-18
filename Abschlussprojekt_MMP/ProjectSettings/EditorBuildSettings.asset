@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Game Level/Main Menu.unity
     guid: c092e735abaadd149b947b06f7caaede
   - enabled: 1
+    path: Assets/Game Level/Scoreboard.unity
+    guid: 5ead40d7602ce054cb314b54e68546e5
+  - enabled: 1
     path: Assets/Game Level/Level1.unity
     guid: 41eefb8b7bb735b44a6f16998231e09b
   m_configObjects: {}

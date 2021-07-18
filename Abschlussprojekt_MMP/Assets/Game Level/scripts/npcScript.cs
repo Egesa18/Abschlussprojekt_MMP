@@ -32,6 +32,8 @@ public class npcScript : MonoBehaviour
             //Debug.Log(hit.collider.gameObject.name);
             Destroy(hit.collider.gameObject);
             guiScript.manipulateScore(100);
+            scoreController.instance.AddScore(100);
+            scoreController.instance.updateHighscore();
             if (guiScript.points_score == 1000)
             {
                 bonusSound.Play();
