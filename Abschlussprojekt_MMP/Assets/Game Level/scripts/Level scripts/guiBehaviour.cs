@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+
 
 public class guiBehaviour : MonoBehaviour
 {
@@ -121,7 +119,7 @@ public class guiBehaviour : MonoBehaviour
         timer += Time.deltaTime;
         if (counter < 0.5f)
         {
-            counter = timer / 90.0f;
+            counter = timer / 120.0f;
         }
         else if (counter >= 0.5f)
         {

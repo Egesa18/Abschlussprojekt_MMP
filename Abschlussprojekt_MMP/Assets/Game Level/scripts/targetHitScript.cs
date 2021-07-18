@@ -1,17 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+
 
 public class targetHitScript : MonoBehaviour
 {
+    AudioSource hitSound;
     public guiBehaviour guiScript;
     public CursorScript cursor;
     [SerializeField] private int hitpoints;
     // Start is called before the first frame update
     void Start()
     {
-
+        hitSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -61,6 +60,7 @@ public class targetHitScript : MonoBehaviour
             guiScript.manipulateScore(100);
             scoreController.instance.AddScore(100);
             scoreController.instance.updateHighscore();
+            hitSound.Play();
         }
         else
         {
