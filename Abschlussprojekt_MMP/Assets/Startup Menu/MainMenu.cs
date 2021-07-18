@@ -5,23 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-
-    // private GameObject backgroundsound;
+    AudioSource backgroundmusic;
     public GameObject endScreen;
+
+
     public void ExitButton()
     {
       
         Application.Quit();
         Debug.Log("You Exited The Game");
-    //    backgroundmusic.GetComponent<AudioSource>().Stop();        
+        
 
     }
 public void StartGame()
     {
-        //endScreen.SetActive(false);
+        
+        
         SceneManager.LoadScene("Level1");
+
         //Cursor.visible = false;
-       
+
     }
 
     public void goHome()

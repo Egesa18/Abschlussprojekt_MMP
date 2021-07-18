@@ -24,7 +24,7 @@ public class guiBehaviour : MonoBehaviour
     private float timer;
 
     public GameObject endScreen;
-
+    
 
     private GameObject ammo1;
     private GameObject ammo2;
@@ -121,8 +121,10 @@ public class guiBehaviour : MonoBehaviour
         {
             //SceneManager.LoadScene("Main Menu");
             endScreen.SetActive(true);
-            GameObject ThemeSound = GameObject.FindGameObjectWithTag("Player");
-            Destroy(ThemeSound);
+
+            //GameObject ThemeSound = GameObject.FindGameObjectWithTag("Player");
+          //  Destroy(ThemeSound);
+            
             Cursor.visible = true;
         }
         timerFront.transform.localScale = new Vector2(counter, 0.5f);

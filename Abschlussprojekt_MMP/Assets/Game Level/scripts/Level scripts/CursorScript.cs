@@ -7,6 +7,7 @@ public class CursorScript : MonoBehaviour
 
     public Texture2D crosshair;
     AudioSource shootingSound;
+    public GameObject endscreen;
 
     // Start is called before the first frame update
     void Start()
@@ -19,13 +20,16 @@ public class CursorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (endscreen.activeSelf == false)
         {
-            shootingSound.Play();
+            if (Input.GetMouseButtonDown(0))
+            {
+                shootingSound.Play();
 
-            //Debug.Log("Click, shooting ray");
-           
+                //Debug.Log("Click, shooting ray");
 
+
+            }
         }
     }
 }

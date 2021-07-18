@@ -582,6 +582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crosshair: {fileID: 2800000, guid: 640aeb5365852894c8454f85ba06f056, type: 3}
+  endscreen: {fileID: 752780864}
 --- !u!4 &28054750
 Transform:
   m_ObjectHideFlags: 0
