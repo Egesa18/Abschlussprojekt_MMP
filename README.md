@@ -10,14 +10,15 @@
 - [Bugs](https://github.com/Egesa18/Abschlussprojekt_MMP/issues "Issues Page")
 
 
-## Screenshots
+## How To Start
+- Start Game with "Main Menu" Scene
 
+## Gameplay
+- Move Camera with WASD or Arrow Keys
+- Shoot NPCs with Left Mouse Button
+- Change Ammo with Numbers 1,2 and 3
+- Open Help with 0
 
 ## Built With
 
 - Unity
-
-## Future Updates
-
-- [ ] Basic Gameplay
-- [ ] Extensions and Polish
