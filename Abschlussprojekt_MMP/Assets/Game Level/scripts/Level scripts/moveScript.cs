@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class moveScript : MonoBehaviour
 {
-    public float speed = 10f;
+    [SerializeField] public float horizontalSpeed = 10f;
+    [SerializeField] public float verticalSpeed = 2f;
+    float horizontalAction, verticalAction;
 
     // Start is called before the first frame update
     void Start()
@@ -15,35 +17,47 @@ public class moveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        horizontalAction = Input.GetAxisRaw("Horizontal");
+        verticalAction = Input.GetAxisRaw("Vertical");
+    }
+
+    private void FixedUpdate()
+    {
         Vector3 pos = transform.position;
-        float movementKey = Input.GetAxisRaw("Horizontal");
 
-
-        //w and s keys included but not currently used for y tracking, maybe later if it makes sense
-
-        if (movementKey == 1) 
-
+        if (horizontalAction == 1)
         {
-            if(pos.x < 22)
+            if (pos.x < 28)
             {
-                pos.x += speed * Time.deltaTime;
-            }
-
-        }
-
-        if (movementKey == -1) 
-
-        {
-
-            if(pos.x > 0)
-            {
-                pos.x -= speed * Time.deltaTime;
+                pos.x += horizontalSpeed * Time.deltaTime;
             }
         }
 
+        if (horizontalAction == -1)
+        {
+            if (pos.x > -18)
+            {
+                pos.x -= horizontalSpeed * Time.deltaTime;
+            }
+        }
+
+        if (verticalAction == 1)
+        {
+            if (pos.y < 0)
+            {
+                pos.y += verticalSpeed * Time.deltaTime;
+            }
+        }
+
+        if (verticalAction == -1)
+        {
+            if (pos.y > -1.2)
+            {
+                pos.y -= verticalSpeed * Time.deltaTime;
+            }
+        }
 
 
         transform.position = pos;
-
     }
 }
