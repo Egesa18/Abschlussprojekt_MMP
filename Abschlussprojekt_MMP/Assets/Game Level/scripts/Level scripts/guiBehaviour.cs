@@ -119,7 +119,7 @@ public class guiBehaviour : MonoBehaviour
         timer += Time.deltaTime;
         if (counter < 0.5f)
         {
-            counter = timer / 120.0f;
+            counter = timer / 80.0f;
         }
         else if (counter >= 0.5f)
         {
