@@ -10,10 +10,11 @@ public class scoreController : MonoBehaviour
     public Text scoreboard_score_text;
     public int score, highscore;
     public static scoreController instance;
+    AudioSource bonusSound;
     // Start is called before the first frame update
     void Start()
     {
-
+        bonusSound = GetComponent<AudioSource>();
     }
 
 
@@ -37,6 +38,7 @@ public class scoreController : MonoBehaviour
     public void AddScore(int increment)
     {
         score += increment;
+        PlayBonusSound();
         updateHighscore();
         scoreboard_score_text.text = score.ToString();
 
@@ -46,15 +48,24 @@ public class scoreController : MonoBehaviour
 
     }
 
+    public void PlayBonusSound()
+    {
+        if(score==highscore){
+            bonusSound.Play();
+        }
+        
+    }
+
     public void updateHighscore()
     {
+  
         if (score > highscore)
         {
+
             highscore = score;
             scoreboard_highscore_text.text = highscore.ToString();
-            Debug.Log(scoreboard_highscore_text.text);
             PlayerPrefs.SetInt("highScore", highscore);
-
+            
         }
 
     }

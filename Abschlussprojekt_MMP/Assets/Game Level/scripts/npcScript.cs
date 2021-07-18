@@ -6,11 +6,11 @@ using UnityEngine.EventSystems;
 public class npcScript : MonoBehaviour
 {
     public guiBehaviour guiScript;
-    AudioSource bonusSound;
+     
     // Start is called before the first frame update
     void Start()
     {
-        bonusSound = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -34,11 +34,7 @@ public class npcScript : MonoBehaviour
             guiScript.manipulateScore(100);
             scoreController.instance.AddScore(100);
             scoreController.instance.updateHighscore();
-            if (guiScript.points_score == 1000)
-            {
-                bonusSound.Play();
-                Debug.Log("You reached Bonus.");
-            }
+  
         }
     }
 }
